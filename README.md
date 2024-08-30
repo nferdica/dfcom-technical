@@ -50,7 +50,7 @@ $ npm run test:e2e
 
 ## Documentação da API
 
-Para mais detalhes sobre os endpoints disponíveis e como usá-los, consulte a documentação da API no diretório `docs/api.md` ou acesse os endpoints descritos diretamente através de um cliente API como Postman.
+Para mais detalhes sobre os endpoints disponíveis e como usá-los, consulte a documentação da API no diretório `docs/api.md`, [api.md](docs/api.md).
 
 ## Links
 
