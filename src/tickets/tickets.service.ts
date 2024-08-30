@@ -15,6 +15,14 @@ export class TicketsService {
     @InjectModel(Event.name) private readonly eventModel: Model<Event>,
   ) {}
 
+  async findById(ticketId: string): Promise<Ticket> {
+    const ticket = await this.ticketModel.findById(ticketId).exec();
+    if (!ticket) {
+      throw new NotFoundException('Ticket not found');
+    }
+    return ticket;
+  }
+
   async findAll(): Promise<Ticket[]> {
     return this.ticketModel.find().exec();
   }

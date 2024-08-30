@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param } from '@nestjs/common';
 import { EventsService } from './events.service';
 import { Event } from './event.schema';
 
@@ -9,6 +9,11 @@ export class EventsController {
   @Get()
   async getAllEvents(): Promise<Event[]> {
     return this.eventsService.findAll();
+  }
+
+  @Get(':eventId')
+  async getEventById(@Param('eventId') eventId: string): Promise<Event> {
+    return this.eventsService.findById(eventId);
   }
 
   @Post()
