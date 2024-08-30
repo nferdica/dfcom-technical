@@ -14,7 +14,9 @@ O sistema utiliza **MongoDB** como banco de dados para armazenar as informaçõe
 
 ## Autenticação
 
-Foi implementado um sistema de **autenticação JWT** para proteger rotas sensíveis, como a compra de ingressos, criação de eventos e o acesso aos dados dos usuários. O token JWT é gerado no login do usuário e deve ser enviado no cabeçalho de autorização (`Authorization: Bearer <token>`) para acessar as rotas protegidas. (**IMPORTANTE:**O token (JWT) expira após 12 horas depois que é gerado, então em tese ele é valido para acessar as rotas seguras por apenas 12 horas, sendo assim após expirado é necessário realizar o login novamente para gerar um novo token (JWT)!)
+Foi implementado um sistema de **autenticação JWT** para proteger rotas sensíveis, como a compra de ingressos, criação de eventos e o acesso aos dados dos usuários. O token JWT é gerado no login do usuário e deve ser enviado no cabeçalho de autorização (`Authorization: Bearer <token>`) para acessar as rotas protegidas. 
+
+**IMPORTANTE:**O token (JWT) expira após 12 horas depois que é gerado, então em tese ele é valido para acessar as rotas seguras por apenas 12 horas, sendo assim após expirado é necessário realizar o login novamente para gerar um novo token (JWT)!
 
 ---
 
