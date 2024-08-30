@@ -11,9 +11,7 @@ describe('UsersController', () => {
     const module: TestingModule = await Test.createTestingModule({
       imports: [
         UsersModule,
-        MongooseModule.forRoot(
-          'mongodb+srv://nferdica:%40Ncf200224@nferdica.cojrt.mongodb.net/?retryWrites=true&w=majority&appName=nferdica',
-        ),
+        MongooseModule.forRoot(process.env.MONGO_URL),
         MongooseModule.forFeature([{ name: User.name, schema: UserSchema }]),
         UsersModule,
       ],

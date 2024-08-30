@@ -10,9 +10,7 @@ import { AppService } from './app.service';
 // Este é o modulo raiz da aplicação que importa todos os módulos necessários.
 @Module({
   imports: [
-    MongooseModule.forRoot(
-      'mongodb+srv://nferdica:%40Ncf200224@nferdica.cojrt.mongodb.net/?retryWrites=true&w=majority&appName=nferdica',
-    ), // Conexão com banco de dados utilizando MongoDB
+    MongooseModule.forRoot(process.env.MONGO_URL), // Conexão com banco de dados utilizando MongoDB
     AuthModule,
     UsersModule,
     EventsModule,

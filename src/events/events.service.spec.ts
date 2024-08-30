@@ -11,9 +11,7 @@ describe('EventsService', () => {
     const module: TestingModule = await Test.createTestingModule({
       imports: [
         EventsModule,
-        MongooseModule.forRoot(
-          'mongodb+srv://nferdica:%40Ncf200224@nferdica.cojrt.mongodb.net/?retryWrites=true&w=majority&appName=nferdica',
-        ), // Ajuste o URL conforme necessário
+        MongooseModule.forRoot(process.env.MONGO_URL), // Ajuste o URL conforme necessário
         MongooseModule.forFeature([{ name: 'Event', schema: EventSchema }]),
       ],
       providers: [EventsService],
