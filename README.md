@@ -52,6 +52,6 @@ Para mais detalhes sobre os endpoints disponíveis e como usá-los, consulte a d
 ## Links
 
 - **Arquivo principal de instrução** [README.md](../README.md)
-- **Parte 1: Análise e Planejamento**  [planning.md](./planning.md)
-- **Parte 2: Implementação Técnica** [api.md](./api.md)
-- **Parte 3: Refatoração e Melhoria** [refactoring-code.md](./refactoring-code.md)
+- **Parte 1: Análise e Planejamento**  [planning.md](docs/planning.md)
+- **Parte 2: Implementação Técnica** [api.md](docs/api.md)
+- **Parte 3: Refatoração e Melhoria** [refactoring-code.md](docs/refactoring-code.md)

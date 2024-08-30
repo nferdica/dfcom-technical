@@ -61,5 +61,5 @@ A aplicação foi desenvolvida utilizando o **NestJS**, um framework robusto par
 
 - **Arquivo principal de instrução** [README.md](../README.md)
 - **Parte 1: Análise e Planejamento**  [planning.md](./planning.md)
-- **Parte 2: Implementação Técnica** [technical-implementatio](./technical-implementation.md)
+- **Parte 2: Implementação Técnica** [technical-implementatio](./api.md)
 - **Parte 3: Refatoração e Melhoria** [refactoring-code.md](./refactoring-code.md)
