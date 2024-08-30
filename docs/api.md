@@ -14,7 +14,56 @@ O sistema utiliza **MongoDB** como banco de dados para armazenar as informaçõe
 
 ## Autenticação
 
-Foi implementado um sistema de **autenticação JWT** para proteger rotas sensíveis, como a compra de ingressos, criação de eventos e o acesso aos dados dos usuários. O token JWT é gerado no login do usuário e deve ser enviado no cabeçalho de autorização (`Authorization: Bearer <token>`) para acessar as rotas protegidas. (**IMPORTANTE:**O token (JWT) expira após 1 hora depois que é gerado, então em tese ele é valido para acessar as rotas seguras por apenas 1 hora, sendo assim após expirado é necessário realizar o login novamente para gerar um novo token (JWT)!)
+Foi implementado um sistema de **autenticação JWT** para proteger rotas sensíveis, como a compra de ingressos, criação de eventos e o acesso aos dados dos usuários. O token JWT é gerado no login do usuário e deve ser enviado no cabeçalho de autorização (`Authorization: Bearer <token>`) para acessar as rotas protegidas. (**IMPORTANTE:**O token (JWT) expira após 12 horas depois que é gerado, então em tese ele é valido para acessar as rotas seguras por apenas 12 horas, sendo assim após expirado é necessário realizar o login novamente para gerar um novo token (JWT)!)
+
+---
+
+## Importação e Configuração de Testes para Postman e Insomnia
+
+Este repositório contém dois arquivos `.json` que você pode utilizar para realizar testes na API com o Postman ou o Insomnia. Abaixo estão as instruções para importar essas coleções e configurar o ambiente de testes.
+
+- **Arquivos .json**  [postman.json | insomnia.json](./)
+
+### 1. Importação das Coleções
+
+#### **Para Postman**
+1. Abra o Postman.
+2. Clique em **"Import"** no canto superior esquerdo.
+3. Na aba **"File"**, clique em **"Upload Files"**.
+4. Selecione o arquivo `.json` correspondente ao Postman disponível no repositório.
+5. O Postman irá processar e importar a coleção, que aparecerá na sua lista de coleções.
+
+#### **Para Insomnia**
+1. Abra o Insomnia.
+2. Clique no ícone de hambúrguer (três linhas) no canto superior esquerdo.
+3. Selecione **"Import/Export"**.
+4. Clique em **"Import Data"**.
+5. Escolha **"From File"** e selecione o arquivo `.json` correspondente ao Insomnia disponível no repositório.
+6. A coleção será importada e aparecerá no seu workspace.
+
+### 2. Configuração do Ambiente
+
+Após a importação, é necessário configurar algumas variáveis de ambiente para que as requisições funcionem corretamente.
+
+#### **Login e Token JWT**
+1. No Postman ou Insomnia, localize a requisição de **login** e execute-a com as credenciais apropriadas.
+2. Após a execução bem-sucedida, um token JWT será gerado.
+3. **Copie o token JWT** gerado.
+
+#### **Configuração das Variáveis**
+1. No **Postman**, clique no ícone do olho na barra superior para visualizar as variáveis de ambiente.
+   - Encontre a variável `token_active` e substitua o valor atual pelo token JWT copiado.
+   - Verifique se a variável `base_url` está configurada como `http://localhost:3000`.
+   
+2. No **Insomnia**, vá até as variáveis de ambiente clicando no ícone de hambúrguer (três linhas) no canto superior esquerdo.
+   - No ambiente ativo, localize a variável `token_active` e cole o token JWT copiado.
+   - Verifique se a variável `base_url` está configurada como `http://localhost:3000`.
+
+### 3. Realização dos Testes
+
+Agora que tudo está configurado:
+- Execute as requisições disponíveis na coleção para testar a API.
+- Certifique-se de que as requisições que exigem autenticação estão utilizando o token JWT configurado.
 
 ---
 

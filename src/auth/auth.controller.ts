@@ -12,7 +12,7 @@ import { LocalAuthGuard } from './local-auth.guard';
 export class AuthController {
   constructor(private authService: AuthService) {}
 
-  @UseGuards(LocalAuthGuard)
+  @UseGuards(LocalAuthGuard) // Protege a rota de login, garantindo que o usuário seja validado antes de acessar o método login
   @Post('login')
   async login(
     @Body('username') username: string,
@@ -20,8 +20,8 @@ export class AuthController {
   ) {
     const user = await this.authService.validateUser(username, password);
     if (!user) {
-      throw new UnauthorizedException('Invalid credentials');
+      throw new UnauthorizedException('Invalid credentials'); // Lança exceção se as credenciais forem inválidas
     }
-    return this.authService.login(user);
+    return this.authService.login(user); // Gera e retorna um token JWT para o usuário autenticado
   }
 }

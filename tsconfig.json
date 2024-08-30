@@ -1,27 +1,28 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "declaration": true,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "target": "ES2021",
-    "sourceMap": true,
-    "outDir": "./dist",
-    "baseUrl": "./src",
-    "paths": {
+    "module": "commonjs", // Define o sistema de módulos que será utilizado. "commonjs" é o padrão para Node.js.
+    "declaration": true, // Gera arquivos de declaração (.d.ts) para cada arquivo TypeScript compilado.
+    "removeComments": true, // Remove comentários no código de saída JavaScript.
+    "emitDecoratorMetadata": true, // Habilita a emissão de metadados para decorators, o que é necessário para o uso de decorators com bibliotecas como NestJS.
+    "experimentalDecorators": true, // Habilita o uso de decorators experimentais. Necessário para usar decorators em TypeScript.
+    "allowSyntheticDefaultImports": true, // Permite a importação de módulos padrão como se fossem módulos ES6, mesmo que o módulo não tenha um export default.
+    "target": "ES2021", // Especifica a versão alvo do ECMAScript que o código TypeScript será transpilado.
+    "sourceMap": true, // Gera arquivos de mapeamento de fonte (.map), que ajudam na depuração, mapeando o código transpilado de volta ao TypeScript original.
+    "outDir": "./dist", // Especifica o diretório de saída para os arquivos transpilados.
+    "baseUrl": "./src", // Define a base para a resolução de caminhos de módulos dentro do projeto.
+    // Configura atalhos de caminho para facilitar a importação de módulos. Aqui, os atalhos são definidos para os diretórios "auth", "users", "tickets" e "events".
+    "paths": { 
       "auth/*": ["src/auth/*"],
       "users/*": ["src/users/*"],
       "tickets/*": ["src/tickets/*"],
       "events/*": ["src/events/*"],
     },
-    "incremental": true,
-    "skipLibCheck": true,
-    "strictNullChecks": false,
-    "noImplicitAny": false,
-    "strictBindCallApply": false,
-    "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
+    "incremental": true, // Habilita a compilação incremental, o que acelera a recompilação do projeto ao reutilizar parte da compilação anterior.
+    "skipLibCheck": true, // Ignora a verificação de tipos em arquivos de definição de tipos (.d.ts), o que pode melhorar o desempenho da compilação.
+    "strictNullChecks": false, // Desabilita a verificação estrita de valores nulos, permitindo que variáveis possam conter "null" ou "undefined" sem erro.
+    "noImplicitAny": false,  // Desabilita a verificação de variáveis implicitamente tipadas como "any".
+    "strictBindCallApply": false, // Desabilita a verificação estrita ao usar métodos de ligação, chamada ou aplicação (call, bind, apply).
+    "forceConsistentCasingInFileNames": false, // Desabilita a exigência de nomes de arquivos com casos de letras consistentes no sistema de arquivos.
+    "noFallthroughCasesInSwitch": false // Desabilita erros em switch cases que não têm declarações de interrupção explícitas.
   }
 }

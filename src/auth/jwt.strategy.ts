@@ -7,13 +7,13 @@ import { JwtPayload } from './jwt.payload.interface';
 export class JwtStrategy extends PassportStrategy(Strategy) {
   constructor() {
     super({
-      jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-      ignoreExpiration: false,
-      secretOrKey: 'SECRET_KEY', // Deve ser a mesma chave usada no auth.module.ts
+      jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(), // Extrai o JWT do cabeçalho de autorização como Bearer token
+      ignoreExpiration: false, // Garante que o JWT expirado não será aceito
+      secretOrKey: 'SECRET_KEY', // Chave secreta usada para verificar a assinatura do JWT
     });
   }
 
   async validate(payload: JwtPayload) {
-    return { userId: payload.sub, username: payload.username };
+    return { userId: payload.sub, username: payload.username }; // Retorna um objeto contendo as informações do usuário extraídas do payload do JWT
   }
 }
