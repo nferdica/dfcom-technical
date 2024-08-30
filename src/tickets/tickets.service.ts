@@ -6,7 +6,7 @@ import {
 import { InjectModel } from '@nestjs/mongoose';
 import { Model, Types } from 'mongoose';
 import { Ticket } from './ticket.schema';
-import { Event } from 'src/events/event.schema';
+import { Event } from '../events/event.schema';
 
 @Injectable()
 export class TicketsService {
