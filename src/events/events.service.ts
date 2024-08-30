@@ -12,7 +12,7 @@ export class EventsService {
   async findById(eventId: string): Promise<Event> {
     const event = await this.eventModel.findById(eventId).exec();
     if (!event) {
-      throw new NotFoundException('Event not found');
+      throw new NotFoundException('Evento não encontrado!');
     }
     return event;
   }

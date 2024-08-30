@@ -33,10 +33,10 @@ export class UsersController {
   async register(@Body() user: User): Promise<{ message: string }> {
     const existingUser = await this.usersService.findOne(user.username); // Verifica se o nome de usuário já existe.
     if (existingUser) {
-      throw new BadRequestException('Username already exists'); // Se o nome de usuário já estiver registrado, lança uma exceção de "Bad Request"
+      throw new BadRequestException('O nome de usuário já existe!'); // Se o nome de usuário já estiver registrado, lança uma exceção de "Bad Request"
     }
 
     await this.usersService.create(user); // Cria um novo usuário no banco de dados.
-    return { message: 'User registered successfully' }; // Retorna uma mensagem de sucesso ao registrar o usuário.
+    return { message: 'Usuário registrado com sucesso!' }; // Retorna uma mensagem de sucesso ao registrar o usuário.
   }
 }

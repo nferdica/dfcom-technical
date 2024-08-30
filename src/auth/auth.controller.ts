@@ -20,7 +20,7 @@ export class AuthController {
   ) {
     const user = await this.authService.validateUser(username, password);
     if (!user) {
-      throw new UnauthorizedException('Invalid credentials'); // Lança exceção se as credenciais forem inválidas
+      throw new UnauthorizedException('Credenciais inválidas!'); // Lança exceção se as credenciais forem inválidas
     }
     return this.authService.login(user); // Gera e retorna um token JWT para o usuário autenticado
   }

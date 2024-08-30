@@ -36,18 +36,18 @@ export class TicketsService {
     // Verificar se o evento associado ao ingresso existe
     const event = await this.eventModel.findById(new Types.ObjectId(eventId));
     if (!event) {
-      throw new NotFoundException('Event not found'); // Lança uma exceção se o evento não for encontrado
+      throw new NotFoundException('Esse evento não existe!'); // Lança uma exceção se o evento não for encontrado
     }
 
     // Verificar se há ingressos disponíveis para o evento
     if (event.availableTickets <= 0) {
-      throw new BadRequestException('No tickets available'); // Lança uma exceção se não houver ingressos disponíveis
+      throw new BadRequestException('Não tem tickets disponiveis!'); // Lança uma exceção se não houver ingressos disponíveis
     }
 
     // Verifica se a quantidade solicitada de ingressos é válida (maior que 0 e não excede a quantidade disponível)
     const quantity = createTicketDto.quantity || 1;
     if (quantity <= 0 || quantity > event.availableTickets) {
-      throw new BadRequestException('Invalid quantity'); // Lança uma exceção se a quantidade for inválida
+      throw new BadRequestException('Quantidade invalida!'); // Lança uma exceção se a quantidade for inválida
     }
 
     // Cria os ingressos solicitados
