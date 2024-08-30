@@ -4,6 +4,8 @@ import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { EventsModule } from './events/events.module';
 import { TicketsModule } from './tickets/tickets.module';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
 
 // Este é o modulo raiz da aplicação que importa todos os módulos necessários.
 @Module({
@@ -16,5 +18,7 @@ import { TicketsModule } from './tickets/tickets.module';
     EventsModule,
     TicketsModule,
   ],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}

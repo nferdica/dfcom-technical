@@ -41,8 +41,11 @@ $ npm run start
 ## Executando testes
 
 ```bash
-# unit tests
 $ npm run test
+```
+
+```bash
+$ npm run test:e2e
 ```
 
 ## Documentação da API
