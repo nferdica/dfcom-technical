@@ -28,7 +28,6 @@ export class UsersController {
     return this.usersService.findOneById(id); // Retorna um usuário específico com base no ID fornecido como parâmetro.
   }
 
-  @UseGuards(JwtAuthGuard) // Usa JwtAuthGuard para proteger a rota, garantindo que apenas usuários autenticados possam acessá-la.
   @Post('register')
   async register(@Body() user: User): Promise<{ message: string }> {
     const existingUser = await this.usersService.findOne(user.username); // Verifica se o nome de usuário já existe.
