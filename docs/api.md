@@ -1,4 +1,4 @@
-# Sistema de Bilheteria para Cassino - Implementação Técnica
+# Implementação Técnica - Sistema de Bilheteria para Cassino
 
 ## Visão Geral
 
@@ -292,5 +292,5 @@ Essa arquitetura garante escalabilidade, segurança e desempenho para lidar com 
 
 - **Arquivo principal de instrução** [README.md](../README.md)
 - **Parte 1: Análise e Planejamento**  [planning.md](./planning.md)
-- **Parte 2: Implementação Técnica** [technical-implementatio](./api.md)
-- **Parte 3: Refatoração e Melhoria** [refactoring-code.md](./refactoring-code.md)
+- **Parte 2: Implementação Técnica** [api.md](./api.md)
+- **Parte 3: Refatoração e Melhoria** [refactoring.md](./refactoring-code.md)

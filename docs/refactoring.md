@@ -1,4 +1,4 @@
-# Refatoração de Código
+# Refatoração e Melhoria - Código parcial já existente
 
 Este documento apresenta a refatoração do código do serviço, utilizado para gerenciar produtos em um sistema baseado no framework NestJS. O código original apresentava algumas ineficiências e falta de clareza na organização. A refatoração visou melhorar a consistência de dados, otimizar consultas MongoDB e aprimorar a organização e legibilidade do código.
 
@@ -270,5 +270,5 @@ export class ProductService {
 
 - **Arquivo principal de instrução** [README.md](../README.md)
 - **Parte 1: Análise e Planejamento**  [planning.md](./planning.md)
-- **Parte 2: Implementação Técnica** [technical-implementatio](./api.md)
-- **Parte 3: Refatoração e Melhoria** [refactoring-code.md](./refactoring-code.md)
+- **Parte 2: Implementação Técnica** [api.md](./api.md)
+- **Parte 3: Refatoração e Melhoria** [refactoring.md](./refactoring-code.md)
