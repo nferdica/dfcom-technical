@@ -58,4 +58,4 @@ Para mais detalhes sobre os endpoints disponíveis e como usá-los, consulte a d
 - **Parte 1: Análise e Planejamento**  [Planejamento](docs/planning.md)
 - **Parte 2: Implementação Técnica** [Documentação](docs/api.md)
 - **Parte 3: Refatoração e Melhoria** [Refatoração](docs/refactoring.md)
-= **Parte 4: Apresentação** [Apresentação] (https://youtu.be/_FCRMsN70D4)
+- **Parte 4: Apresentação** [Apresentação](https://youtu.be/_FCRMsN70D4)
