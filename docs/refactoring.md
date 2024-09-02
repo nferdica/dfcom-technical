@@ -268,7 +268,7 @@ export class ProductService {
 
 ## Links
 
-- **Arquivo principal de instrução** [Leia-me](../README.md)
+- **Arquivo principal de instrução** [Leia-me](README.md)
 - **Parte 1: Análise e Planejamento**  [Planejamento](docs/planning.md)
 - **Parte 2: Implementação Técnica** [Documentação](docs/api.md)
 - **Parte 3: Refatoração e Melhoria** [Refatoração](docs/refactoring.md)
