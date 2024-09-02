@@ -268,7 +268,8 @@ export class ProductService {
 
 ## Links
 
-- **Arquivo principal de instrução** [README.md](../README.md)
-- **Parte 1: Análise e Planejamento**  [planning.md](./planning.md)
-- **Parte 2: Implementação Técnica** [api.md](./api.md)
-- **Parte 3: Refatoração e Melhoria** [refactoring.md](./refactoring.md)
+- **Arquivo principal de instrução** [Leia-me](../README.md)
+- **Parte 1: Análise e Planejamento**  [Planejamento](docs/planning.md)
+- **Parte 2: Implementação Técnica** [Documentação](docs/api.md)
+- **Parte 3: Refatoração e Melhoria** [Refatoração](docs/refactoring.md)
+= **Parte 4: Apresentação** [Apresentação] (https://youtu.be/_FCRMsN70D4)
